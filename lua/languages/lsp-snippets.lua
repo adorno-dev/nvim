@@ -3,7 +3,6 @@ return {
     dependencies = {
         'rafamadriz/friendly-snippets',
         'hrsh7th/vim-vsnip',
-
         'dcampos/nvim-snippy'
     },
     config = function()

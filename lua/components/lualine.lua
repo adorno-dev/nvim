@@ -57,7 +57,8 @@ return {
                     always_divide_middle = true,
                 },
                 sections = {
-                    lualine_a = { init.branch, init.diagnostics },
+                    -- lualine_a = { init.branch, init.diagnostics },
+					lualine_a = { init.diagnostics, init.branch },
                     lualine_b = { init.mode },
                     lualine_c = {},
                     -- lualine_x = { "encoding", "fileformat", "filetype" },
