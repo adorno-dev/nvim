@@ -1,10 +1,20 @@
+local keymap = vim.keymap.set
+
+local mappings = {}
+
 -- window navigation
-vim.keymap.set('n', '<C-h>', '<C-w>h', {})
-vim.keymap.set('n', '<C-l>', '<C-w>l', {})
-vim.keymap.set('n', '<C-j>', '<C-w>j', {})
-vim.keymap.set('n', '<C-k>', '<C-w>k', {})
+keymap("n", "<C-h>", "<C-w>h", {})
+keymap("n", "<C-l>", "<C-w>l", {})
+keymap("n", "<C-j>", "<C-w>j", {})
+keymap("n", "<C-k>", "<C-w>k", {})
 
 -- common shortcuts
-vim.keymap.set('n', 'q', ':quit<cr>', {})
-vim.keymap.set('n', '<C-q>', ':quitall!<cr>', {})
-vim.keymap.set('n', '<C-s>', ':write<cr>', {})
+keymap("n", "q", ":quit<cr>", {})
+keymap("n", "<C-q>", ":quitall!<cr>", {})
+keymap("n", "<C-s>", ":write<cr>", {})
+
+-- split shortcuts
+keymap('n', 'ss', '<cmd>split<cr>')
+keymap('n', 'sv', '<cmd>vsplit<cr>')
+
+return mappings

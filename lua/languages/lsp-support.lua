@@ -9,9 +9,12 @@ return {
             local servers = { 
                 'csharp_ls',
                 'clangd', 
+								'rust_analyzer',
                 'lua_ls', 
+								'emmet_ls',
                 'html', 
                 'cssls', 
+								'tailwindcss',
                 'pyright', 
                 'tsserver', 
             }
