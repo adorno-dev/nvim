@@ -3,7 +3,6 @@ return {
         'neovim/nvim-lspconfig',
         lazy = false,
         config = function()
-            
             local completion = require ('cmp_nvim_lsp')
             local lsp_config = require ('lspconfig')
             local servers = { 
@@ -18,11 +17,9 @@ return {
                 'pyright', 
                 'tsserver', 
             }
-        
             for _, server in ipairs(servers) do
                 lsp_config[server].setup { capabilities = completion.default_capabilities() }
             end
-        
             -- omnisharp
             lsp_config.omnisharp.setup({
                 capabilities = capabilities,
@@ -36,8 +33,9 @@ return {
                 sdk_include_prereleases = true,
                 analyze_open_documents_only = false,
             })
-        
+
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
             vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
             vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
@@ -49,7 +47,7 @@ return {
             --     callback = function(ev)
             --     -- Enable completion triggered by <c-x><c-o>
             --     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-            
+
             --     -- Buffer local mappings.
             --     -- See `:help vim.lsp.*` for documentation on any of the below functions
             --     local opts = { buffer = ev.buf }
@@ -75,7 +73,6 @@ return {
 
 
 
-    
         end
     },
     -- {
