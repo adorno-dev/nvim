@@ -5,17 +5,18 @@ return {
         config = function()
             local completion = require ('cmp_nvim_lsp')
             local lsp_config = require ('lspconfig')
-            local servers = { 
+            local servers = {
                 'csharp_ls',
-                'clangd', 
+								'kotlin_language_server',
+                'clangd',
 								'rust_analyzer',
-                'lua_ls', 
+                'lua_ls',
 								'emmet_ls',
-                'html', 
-                'cssls', 
+                'html',
+                'cssls',
 								'tailwindcss',
-                'pyright', 
-                'tsserver', 
+                'pyright',
+                'tsserver',
             }
             for _, server in ipairs(servers) do
                 lsp_config[server].setup { capabilities = completion.default_capabilities() }
