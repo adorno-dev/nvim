@@ -10,7 +10,10 @@ return {
             .setup {
                 view = {
                     width = 50
-                }
+                },
+								filters = {
+										custom = {'bin','obj'}
+								}
             }
         vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<cr>', {})
     end,

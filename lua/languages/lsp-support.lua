@@ -7,14 +7,16 @@ return {
             local lsp_config = require ('lspconfig')
             local servers = {
                 'csharp_ls',
-								'kotlin_language_server',
+				'docker_compose_language_service',
+				'dockerls',
+				'kotlin_language_server',
                 'clangd',
-								'rust_analyzer',
+				'rust_analyzer',
                 'lua_ls',
-								'emmet_ls',
+				'emmet_ls',
                 'html',
                 'cssls',
-								'tailwindcss',
+				'tailwindcss',
                 'pyright',
                 'tsserver',
             }
