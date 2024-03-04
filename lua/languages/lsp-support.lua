@@ -6,7 +6,8 @@ return {
             local completion = require ('cmp_nvim_lsp')
             local lsp_config = require ('lspconfig')
             local servers = {
-                'csharp_ls',
+                -- 'csharp_ls',
+				'omnisharp',
 				'docker_compose_language_service',
 				'dockerls',
 				'kotlin_language_server',
@@ -28,20 +29,25 @@ return {
                 capabilities = capabilities,
                 cmd = { "dotnet", os.getenv("HOME") .."/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll" },
                 filetypes = { "cs" },
+				omnisharp = {
+					useModernNet = true,
+					monoPath = '/usr/bin/mono'
+				},
+				type_definition = true,
                 enable_editorconfig_support = true,
                 enable_ms_build_load_projects_on_demand = false,
+				enable_import_completion = false,
                 enable_roslyn_analyzers = true,
                 organize_imports_on_format = false,
-                enable_import_completion = false,
                 sdk_include_prereleases = true,
                 analyze_open_documents_only = false,
             })
-
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
             vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
             vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set('n', 'rn', vim.lsp.buf.rename, {})
 
             -- -- Use LspAttach autocommand to only map the following keys
             -- -- after the language server attaches to the current buffer
