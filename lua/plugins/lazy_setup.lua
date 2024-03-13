@@ -14,6 +14,7 @@ local plugins = {
     require ('languages.lsp-snippets'),
     require ('languages.lsp-completion'),
     require ('languages.lsp-support'),
+	-- require ('languages.syntax'),
     require ('languages.highlighting'),
     require ('languages.formatting'),
     require ('languages.debugging'),
