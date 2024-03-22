@@ -25,7 +25,7 @@ return {
 			end,
 		}
 		init.filetype = { "filetype", icons_enabled = false, icon = nil }
-		init.branch = { "branch", icons_enabled = true, icon = "" }
+		-- init.branch = { "branch", icons_enabled = true, icon = "" }
 		init.location = { "location", padding = 0 }
 
 		init.hide_in_width = function()
