@@ -59,7 +59,7 @@ return {
                     },
                 },
                 modified = {
-                    symbol = "",
+                    symbol = "",
                     highlight = "NeoTreeModified",
                 },
                 name = {
