@@ -1,0 +1,11 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "_lazygit_toggle",
+        "_bun_outdated"
+    ],
+    "diagnostics.disable": [
+        "inject-field",
+        "redundant-parameter"
+    ]
+}
